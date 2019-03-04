@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher"
+            tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/constName"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPhoto"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Nama: "
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textSize="18sp" tools:ignore="MissingConstraints"/>
+
+        <TextView
+                android:id="@+id/tvNameContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Saya lucuan"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/tvName"
+                tools:ignore="MissingConstraints"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/constAge"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constName"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Age: "
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textSize="18sp" tools:ignore="MissingConstraints"/>
+
+        <TextView
+                android:id="@+id/tvAgeContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="18"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/tvAge"
+                tools:ignore="MissingConstraints"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/constButton"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/constAge" tools:layout_editor_absoluteX="107dp"
+            android:layout_marginTop="4dp" tools:ignore="MissingConstraints">
+
+
+        <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_edit"
+                android:textSize="16sp"
+                tools:ignore="MissingConstraints"/>
+
+        <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_delete"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/btnEdit"
+                android:layout_marginLeft="108dp"
+                tools:ignore="MissingConstraints"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--<View-->
+            <!--android:id="@+id/divider"-->
+            <!--style="@style/RegisterDivider"-->
+            <!--android:visibility="visible"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+</android.support.constraint.ConstraintLayout>
